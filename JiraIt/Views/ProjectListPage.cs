@@ -14,12 +14,9 @@ namespace JiraIt
 			Title = "Jira It";
 
 			_listview = new ListView {
-				RowHeight = 40,
+				RowHeight = 42,
 				ItemTemplate = new DataTemplate (typeof(ProjectItemCell))
 			};
-
-			_listview.ItemsSource = new ProjectService ()
-				.GetProjects ();
 
 			_listview.ItemSelected += (sender, e) => {
 				var project = (Project) e.SelectedItem;
@@ -30,15 +27,24 @@ namespace JiraIt
 				Navigation.PushAsync (issueListPage);
 			};
 
-			Content = new StackLayout {
+			var main = new StackLayout {
 				VerticalOptions = LayoutOptions.FillAndExpand,
 				Children = { _listview }
+			};
+
+			AbsoluteLayoutHelper.SetControlToFull (main);
+
+			Content = new AbsoluteLayout {
+				Children = {
+					main
+				}
 			};
 		}
 
 		protected override void OnAppearing ()
 		{
 			base.OnAppearing ();
+
 			_listview.ItemsSource = new ProjectService ()
 				.GetProjects ();
 		}

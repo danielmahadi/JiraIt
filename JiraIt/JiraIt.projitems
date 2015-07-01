@@ -20,11 +20,14 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\IssueItemCell.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\IssuePage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\InMemoryDb.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\AbsoluteLayoutHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\AbsoluteOverlay.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Models\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\" />
     <Folder Include="$(MSBuildThisFileDirectory)Data\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Helper\" />
   </ItemGroup>
 </Project>
