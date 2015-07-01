@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{9C549263-2153-4D15-A5E9-AC715F6AC6DE}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>JiraIt</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)JiraIt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Issue.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IssueService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ProjectListPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Project.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ProjectItemCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\IssueListPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ProjectService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\IssueItemCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\IssuePage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\InMemoryDb.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Models\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Services\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Data\" />
+  </ItemGroup>
+</Project>
